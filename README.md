@@ -1,28 +1,56 @@
-# Otimização de Roteamento com Múltiplos Caminhos usando Algoritmo Genético
+# Data Flow Optimization in Ad Hoc Networks using Genetic Algorithms
 
-## Resumo do Projeto
+This repository contains the source code and documentation for a study on data flow optimization in wireless ad hoc networks. The goal is to minimize the total routing cost by efficiently distributing data traffic through multiple paths.
 
-[cite_start]Este projeto propõe um modelo de otimização para distribuir o fluxo de dados de forma eficiente em uma **rede ad hoc**[cite: 7, 13]. [cite_start]Redes ad hoc sem fio são amplamente utilizadas em cenários onde não há infraestrutura de comunicação, como operações militares ou situações de emergência[cite: 6, 12].
+The core of this work is an optimization model that uses Genetic Algorithms (GA) and computational simulations to validate the results.
 
-[cite_start]A comunicação nessas redes é historicamente gerenciada por protocolos de roteamento como o **AODV** e o **OLSR**[cite: 22]. [cite_start]No entanto, a natureza dinâmica dessas redes torna a otimização um desafio complexo[cite: 25]. [cite_start]Para isso, o projeto utiliza um **Algoritmo Genético (GA)** para encontrar a rota de menor **latência** entre um nó de origem e um nó de destino[cite: 58].
+<!--The full paper is available [here]().-->
 
-[cite_start]A abordagem busca otimizar o fluxo de dados através de **múltiplos caminhos**, visando minimizar o custo total de roteamento e respeitando as restrições de capacidade dos enlaces[cite: 7, 36, 51].
+## Repository Contents
 
-## Funcionalidades
+* **`ga_otimizacao_latencia.ipynb`**: A Google Colaboratory notebook that implements the Genetic Algorithm to find the optimal path. It includes the network setup, the GA model, and the final results.
+* **`Otimização_em_Redes (1).pdf`**: The full academic paper in Portuguese, which details the motivation, methodology, and critical analysis of the results.
 
-* [cite_start]**Modelagem da Rede**: A rede é representada como um grafo direcionado com 10 nós e 16 arestas, onde cada enlace possui latência e capacidade máximas[cite: 63, 65].
-* [cite_start]**Algoritmo Genético**: Cada indivíduo da população representa um caminho válido entre os nós de origem e destino[cite: 58].
-* **Função de Aptidão (Fitness)**: A aptidão é calculada pela soma das latências de cada enlace. [cite_start]Caminhos que excedem a capacidade são penalizados com uma pontuação de aptidão muito alta, garantindo que o algoritmo descarte soluções inviáveis[cite: 59, 69, 81].
-* [cite_start]**Operadores Genéticos**: O algoritmo utiliza operadores de cruzamento e mutação para diversificar a população e encontrar soluções eficientes[cite: 60, 70].
+## Abstract
 
-## Como Rodar
+Wireless ad hoc networks are widely used in scenarios where there is no communication infrastructure, such as military operations and emergency situations. In this work, we propose an optimization model to efficiently distribute data flow in an ad hoc network, aiming to minimize the total routing cost through multiple paths. We use Linear Programming techniques and computational simulations to validate the results. The tests show the importance of mathematical modeling in the performance of dynamic networks.
 
-### Pré-requisitos
-Para executar o notebook, você precisará das seguintes bibliotecas:
-- `networkx`
-- `matplotlib`
-- `numpy`
+## Problem Description
 
-Você pode instalá-las usando o `pip` com o arquivo `requirements.txt`:
-```bash
-pip install -r requirements.txt
+The network is represented as a directed graph, where nodes correspond to mobile devices and edges represent communication links. Each link has a specific latency (`l_ij`) and a maximum capacity (`c_ij`).
+
+The objective is to find the most efficient way to route data flow from a source node (`s`) to a destination node (`t`), minimizing the total communication cost. The model allows for the use of multiple paths simultaneously to balance traffic and increase network resilience.
+
+* **Source Node (s):** 0
+* **Destination Node (t):** 9
+* **Demand (d):** 10 units
+
+## Solution Approach
+
+The solution uses a Genetic Algorithm (GA), a meta-heuristic inspired by natural selection, crossover, and mutation.
+
+* **Individual:** Each individual in the GA's population represents a viable path from the source to the destination.
+* **Fitness Function:** The fitness of each path is evaluated based on the sum of the latencies of its links. Paths that violate the capacity constraint are severely penalized.
+* **Genetic Operators:** The algorithm uses crossover to combine two parent paths and mutation to introduce new sub-paths, ensuring genetic diversity and preventing local optima.
+
+## Results
+
+After running the Genetic Algorithm, the best path found was:
+* **Best Path:** `[0, 6, 7, 9]`
+* **Total Latency:** `18`
+
+The algorithm successfully found an efficient path that respected the network's capacity constraints. A visualization of the network graph and the best path can be seen in the notebook's output.
+
+## How to Run
+
+1.  Open the `ga_otimizacao_latencia.ipynb` notebook in Google Colaboratory.
+2.  Install the required libraries by running the first code cell: `pip install networkx matplotlib numpy`.
+3.  Run the notebook cells sequentially to define the network, execute the Genetic Algorithm, and visualize the results.
+
+---
+
+## Citation
+
+Please cite this work as follows:
+
+SILVA DE ANDRADE, A. **Otimização do Fluxo de Dados em uma Rede Ad Hoc com Múltiplos Caminhos**. 2025. Artigo Científico. [local de publicação/repositório]. Disponível em: `Otimização_em_Redes (1).pdf`.
