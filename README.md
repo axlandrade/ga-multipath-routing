@@ -49,8 +49,8 @@ The algorithm successfully found an efficient path that respected the network's 
 
 ---
 
-## Citation
+<!--## Citation
 
 Please cite this work as follows:
 
-SILVA DE ANDRADE, A. **Otimização do Fluxo de Dados em uma Rede Ad Hoc com Múltiplos Caminhos**. 2025. Artigo Científico. [local de publicação/repositório]. Disponível em: `Otimização_em_Redes (1).pdf`.
+SILVA DE ANDRADE, A. **Otimização do Fluxo de Dados em uma Rede Ad Hoc com Múltiplos Caminhos**. 2025. Artigo Científico. [local de publicação/repositório]. Disponível em: `Otimização_em_Redes (1).pdf`.-->
