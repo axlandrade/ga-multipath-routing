@@ -1,3 +1,5 @@
+**[Leia em português](README_PT.md)**
+
 # Data Flow Optimization in Ad Hoc Networks using Genetic Algorithms
 
 This repository contains the source code and documentation for a study on data flow optimization in wireless ad hoc networks. The goal is to minimize the total routing cost by efficiently distributing data traffic through multiple paths.
