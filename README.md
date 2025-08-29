@@ -9,7 +9,7 @@ The core of this work is an optimization model that uses Genetic Algorithms (GA)
 ## Repository Contents
 
 * **`ga_otimizacao_latencia.ipynb`**: A Google Colaboratory notebook that implements the Genetic Algorithm to find the optimal path. It includes the network setup, the GA model, and the final results.
-* **`Otimização_em_Redes (1).pdf`**: The full academic paper in Portuguese, which details the motivation, methodology, and critical analysis of the results.
+<!--* **`Otimização_em_Redes (1).pdf`**: The full academic paper in Portuguese, which details the motivation, methodology, and critical analysis of the results.-->
 
 ## Abstract
 
