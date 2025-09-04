@@ -1,0 +1,19 @@
+{
+    "name": "Otimização de Redes Ad Hoc",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8888
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "root"
+}
