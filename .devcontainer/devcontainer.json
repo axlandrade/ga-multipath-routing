@@ -14,6 +14,9 @@
     "forwardPorts": [
         8888
     ],
-    "postCreateCommand": "pip install -r requirements.txt",
+    // --- MUDANÇA PRINCIPAL ---
+    // A linha "postCreateCommand" foi removida.
+    // A instalação de pacotes já é feita no Dockerfile durante o build da imagem.
+    // Isso torna a criação do contêiner mais rápida e limpa.
     "remoteUser": "root"
 }
