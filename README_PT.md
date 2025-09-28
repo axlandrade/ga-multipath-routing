@@ -1,4 +1,4 @@
-# Otimização do Fluxo de Dados em Redes Ad Hoc usando Algoritmos Genéticos
+# Otimização do Fluxo de Dados em Redes Ad Hoc usando Algoritmos Genéticos em um ambiente reproduzível
 
 Este repositório contém o código-fonte para um estudo sobre a otimização do fluxo de dados em redes ad hoc sem fio. O objetivo é minimizar a latência total de roteamento encontrando um caminho ótimo com o uso de um Algoritmo Genético (GA).
 
